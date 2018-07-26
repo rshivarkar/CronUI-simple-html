@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body >
+
+<table>
+<tr>
+<td>
+   Every
+	</td>
+	<td><input type="text" name="cornInputVal" id="CornInputid" onchange="GenerateCornExpression()"></td>
+	<td> <select id="idselect" onchange="GenerateCornExpression()">
+	  <option value="Minute">Minute</option>
+	  <option value="Hour">Hour</option>
+	  <option value="Day">Day</option>
+	</select>
+	<td>
+	<td><input type="text" name="cornGeneratedVal" id="CornGeneratedid"></td>
+	</tr>
+</table>
+</body>
+<script>
+function GenerateCornExpression() {
+ var s = document.getElementById('idselect');
+ var val = document.getElementById("CornInputid").value;
+if (s.value == "Minute") {
+   document.getElementById("CornGeneratedid").value = "*/" + val + " * * * *";
+}
+else if (s.value == "Hour") {
+      document.getElementById("CornGeneratedid").value = "0 */" + val + " * * *";
+}
+else if (s.value == "Day") {
+      document.getElementById("CornGeneratedid").value = "0 0 */" + val + " * * ";
+}
+}
+</script>
+</html>
