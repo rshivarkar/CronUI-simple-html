@@ -1,8 +1,4 @@
 # CronUI-simple-html
-CronUI simple html
 
 
-<video width="320" height="240" controls>
-  <source src="videos\corn_ui.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![image](/videos/corn_ui.gif)
